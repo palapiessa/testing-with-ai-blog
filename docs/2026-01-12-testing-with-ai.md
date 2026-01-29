@@ -8,4 +8,4 @@ The application to be tested should not be too simple but also not too complex i
 
 Since the game is open source it is perfect for my experiment. After I have added event logging to code I can launch and run the game locally. Maybe I can also host the game to let my friends or family members play the game and help me in collecting usage data.
 
-Here is the [2048 forked repo](https://github.com/petria-tieto/2048)
+Here is the [2048 forked repo](https://github.com/palapiessa/2048)

@@ -1,7 +1,7 @@
 ---
 title: "Play for the data"
 ---
-I consider myself a novice PC game player but luckily 2048 was not too hard to learn! :) I could reach up to number 512, it was hard to multiply that number. But luckily I didn't need to win the game in order to collect data for the model.
+I consider myself a novice PC game player but luckily 2048 was not too hard to learn! :smile: I could reach up to number 512, it was hard to multiply that number. But luckily I didn't need to win the game in order to collect data for the model.
 
 <img src="./images/2026-01-16-game-over.png" alt="My best score" width="400" />
 

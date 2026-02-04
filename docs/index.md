@@ -9,4 +9,5 @@ Check out my posts:
 - [The Game: 2048](./2026-01-12-testing-with-ai-2048.md)
 - [Play for the Data](./2026-01-29-testing-with-ai-2048.md)
 - [Training a Model](./2026-02-02-testing-with-ai-2048.md)
+- [Using the Model to Play](./2026-02-03-testing-with-ai-2048.md)
 

@@ -10,4 +10,5 @@ Check out my posts:
 - [Play for the Data](./2026-01-29-testing-with-ai-2048.md)
 - [Training a Model](./2026-02-02-testing-with-ai-2048.md)
 - [Using the Model to Play](./2026-02-03-testing-with-ai-2048.md)
+- [Game Over?](./2026-02-10-testing-with-ai-2048.md)
 

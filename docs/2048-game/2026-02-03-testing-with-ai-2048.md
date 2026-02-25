@@ -56,7 +56,7 @@ Launch the autoplay mode from browser's developer tools:
 - Safari: Develop - Show Javascript Console
 - Below an image from Safari:
 
-<img src="./images/2026-02-03-autoplay-start.png" alt="js console" width="400" />
+<img src="./images/2026-02-03-autoplay-start.png" alt="js console" width="200" />
 
 How did the model perform? To be honest, the scores were not that good but it was expected since it was learning from my own logs. :)
 But the most important thing is that the model ***can*** play the game! 

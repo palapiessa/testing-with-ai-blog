@@ -44,7 +44,7 @@ Let's look at the test results. The most obvious result in the diagram below is 
 
 <img src="./images/2026-03-03-results.png" alt="Hugging Face view" width="800" />
 
-Overall, testing with an LLM grader works, which is good news. We now have 50 test questions that can be reused for later testing and a baseline result for comparison. A subset of those 50 questions should still be used for manual testing as a guardrail. Around 12-20 questions should be executed and evaluated manually, then compared with LLM grader results to confirm that the grader is still working reliably.
+Overall, testing with an LLM grader works, which is good news. We now have 50 test questions that can be reused in future test runs, along with a baseline result for comparison. A subset of those 50 questions should still be used for manual testing as a guardrail. Around 12-20 questions should be executed and evaluated manually, then compared with the LLM grader results to confirm that the grader is still working reliably.
 
 Command to create result diagram: visualize_scores.py
 ```bash

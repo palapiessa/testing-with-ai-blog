@@ -1,6 +1,9 @@
 ---
 title: "Part 3: How does the bot perform?"
 ---
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+
 After all the preparation for a support bot, it is finally time to start testing. I had a hunch that the bot was not yet ready for production, and I hoped this test stage would reveal the reality. A test run is conducted with a script that takes a list of sample questions. These questions are sent to the bot, and the answers are saved. Then an LLM grader is called to evaluate the answers based on various factors:
 - semantic_correctness
 - helpfulness

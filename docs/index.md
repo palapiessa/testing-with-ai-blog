@@ -12,6 +12,7 @@ Check out my posts:
 ## Support Bot
 - [Let's prepare for support](./support-bot/2026-02-24-support-setup.md)
 - [Part 2: The bot just got bigger](./support-bot/2026-02-28-more-data.md)
+- [Part 3: How does the bot perform?](./support-bot/2026-03-03-LLM-grader.md)
 
 ## Game testing
 - [Testing with AI intro](./2048-game/2026-01-08-testing-with-ai-2048.md)

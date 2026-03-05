@@ -40,7 +40,7 @@ flowchart TB
 
 ## Test results
 
-Let's look at the test results. The most obvious result in the diagram below is the high number of failed answers: about 35 out of 50. The grader was instructed to evaluate answers strictly, so some failures were due to nuances that were not acceptable. In many of these failed cases, a suitable answer was not found, and the fallback response was returned: *I am still learning and cannot answer that right now.* That is not the kind of answer I would like to receive when I am asking questions seriously.
+Let's look at the test results. The most obvious result in the diagram below is the high number of failed answers: about 35 out of 50. The grader was instructed to evaluate answers strictly, so some failures were due to unacceptable nuances. In many failed cases, the bot could not find a suitable answer and returned the fallback response: *I am still learning and cannot answer that right now.* That is not a helpful answer for an e-commerce user having a trouble.
 
 <img src="./images/2026-03-03-results.png" alt="Hugging Face view" width="800" />
 

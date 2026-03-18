@@ -4,15 +4,14 @@ title: "Part 4: QA telemetry"
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true });</script>
 
-In previous chapter the support bot was evaluated with several factors. The first test run can be used as a baseline to compare future test runs with. If this bot should end up in production it would require further development resulting in multiple test runs. Then 
-a centralized result store would help to keep results organized. It would also enable a searchable timeline and provide query tools to analyze results and create trend analysis. A team or stakeholders would be kept informed about the quality of the app with a common dashboard. It is also vital to have decent logging and monitoring in place when AI is incorporated in development process.
+In the [previous chapter](./support-bot/2026-03-03-LLM-grader.md) we evaluated the support bot against several criteria. The results sat in a CSV file on disk which is fine for a one-off test, but hard to compare when you run tests repeatedly or want to share findings. A centralized store helps to keep results organized. Instead of comparing CSV files manually, you can track grader quality over time and share the same view with a team. It would also enable a searchable timeline and provide query tools to analyze results and create trend analysis. 
 
-There are multiple platforms such data can be stored into. For this blog I chose *Azure* which is widely used. *Weights and Biases* is another suitable cloud based pltaform, and it requires less setup work than Azure. Results can also be sent to an internal platform such as for example *Sharepoint*. 
+There are multiple platforms such data can be stored into. For this blog I chose *Azure* which is widely used. *Weights and Biases* is another suitable cloud based platform, and it requires less setup work than Azure. Results can also be sent to an internal platform such as for example *Sharepoint*. 
 
 ## Steps to send results to Azure
-In Azure the results are stored in Application Insights instance. One needs to be created for this purpose. Also a Log Analytics Workspace is required. 
+Results are stored in an Azure Application Insights instance which you'll need to create. You'll also need a Log Analytics Workspace.
 
-The Azure monitor SDK is used in `run_grader.py` to send the results into Application Insights. An evironment variable `APPLICATIONINSIGHTS_CONNECTION_STRING` needs to be loaded into memory before connection can work. Then an Azure logger can be created in Python:
+We use the Azure monitor SDK in `run_grader.py` to send the results into Application Insights. First, set the evironment variable `APPLICATIONINSIGHTS_CONNECTION_STRING`—the SDK reads it automatically. Then an Azure logger can be created in Python:
 ```python
 import logging
 from azure.monitor.opentelemetry import configure_azure_monitor
@@ -40,12 +39,47 @@ See the source code for logger calls. Run the grader from project root to see re
 
 ```bash
 $ PYTHONPATH=./support_bot/src ./.venv/bin/python ./grader/src/run_grader.py --answers-csv ./grader/data/llm_eval_answers.csv --output-jsonl ./grader/data/llm_eval_scores.sample.jsonl
-````
+```
 
+Once your grader runs, the logs appear in Application Insights. Here's a KQL query to retrieve a sample of them:
 
+<img src="./images/2026-03-17-grader-log.png" alt="A logged call" width="800" />
 
+Displaying the results in Application Insights is limited so the dashboard should be created with an Azure Workbook. Following query returns average score data in a sample that is easy to visualize in a Workbook: 
 
+```KQL
+let base =
+    traces
+    | where timestamp > ago(24h)
+    | where message == "Row graded"
+    | extend
+        semantic_correctness = toint(customDimensions["semantic_correctness"]),
+        helpfulness = toint(customDimensions["helpfulness"]),
+        tone_safety = toint(customDimensions["tone_safety"]);
+union
+    (base | summarize avg_score = avg(semantic_correctness) | project metric = "semantic_correctness", avg_score),
+    (base | summarize avg_score = avg(helpfulness) | project metric = "helpfulness", avg_score),
+    (base | summarize avg_score = avg(tone_safety) | project metric = "tone_safety", avg_score)
+| order by metric asc
+```
+The average score chart lets you see at a glance whether bot answers are improving or degrading:
+<img src="./images/2026-03-17-average-scores.png" alt="Average scores" width="800" />
 
+This next query shows pass rates—how many answers cleared your quality threshold:
+```KQL
+traces
+| where timestamp > ago(24h)
+| where message == "Row graded"
+| extend passed_raw = tostring(customDimensions["passed"])
+| where isnotempty(trim(" ", passed_raw))
+| extend passed = tolower(trim(" ", passed_raw))
+| summarize count() by passed
+| order by passed asc
+```
+The pass/fail chart shows your quality baseline at a glance:
+<img src="./images/2026-03-17-grader-pass-fail.png" alt="Pass/fail" width="800" />
+
+We've reached the end of the support bot series. You now know how to build a quality evaluation pipeline, collect results in Azure, and monitor them over time—a crucial capability when deploying AI systems. Thanks for reading! 
 
 ## Disclaimer
 This post and sample code are for educational purposes.

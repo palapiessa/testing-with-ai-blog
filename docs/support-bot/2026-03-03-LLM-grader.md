@@ -28,14 +28,13 @@ $ ../.venv/bin/python ./src/run_grader.py --answers-csv ./data/llm_eval_answers.
 flowchart TB
 	A[A sample of 50 questions] --> B[Run support bot<br/>end-to-end query]
 	B --> C[Capture bot answers]
-	C --> D[Prepare a LLM grader to evaluate answers]
-	D --> E[Call LLM grader<br/>structured JSON scoring]
-	E --> F[Aggregate metrics<br/>quality/helpfulness/tone/safety/pass/fail]
-	F --> G[Save first JSON score as baseline]
-	G --> H[Visualize result]
-
+	C --> D[Call a LLM grader to evaluate answers]
+	D --> E[Aggregate metrics<br/>quality/helpfulness/tone/safety/pass/fail]
+	E --> F[Save first JSON score as baseline]
+	F --> G[Visualize result]
+	
 	classDef readable font-size:16px,stroke-width:2px;
-	class A,B,C,D,E,F,G,H readable;
+	class A,B,C,D,E,F,G readable;
 </div>
 
 ## Test results

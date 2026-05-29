@@ -8,6 +8,8 @@ My name is **Petri Alapiessa**. I am exploring how to use AI for software testin
 You can find me on [LinkedIn](https://www.linkedin.com/in/petrialapiessa/).
 
 Check out my posts:
+## General AI topics
+- [The Cost of Inference](./azure-ai/2026-04-10-inference-costs.md)
 
 ## Support Bot
 - [Let's prepare for support](./support-bot/2026-02-24-support-setup.md)

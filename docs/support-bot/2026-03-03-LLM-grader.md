@@ -59,7 +59,13 @@ The evaluation architecture has two main parts: the support bot and the grader.
 The support bot is built on a knowledge dataset and precomputed embeddings of the dataset questions. When a test question is sent to the bot, it retrieves the most relevant answer from this indexed knowledge base.
 A runner script orchestrates the workflow end to end: it executes the support bot for each test question, captures the bot’s answers, and then sends the question-answer pairs to the grader.
 The grader uses an LLM to evaluate each bot answer against the defined rubric (for example, semantic correctness, helpfulness, and tone/safety), produces structured scores, and stores the results for metrics, visualization, and baseline comparison.
+### Evaluation Process
 
+- Runner script executes the bot on each of 50 test questions
+- Bot answers are captured and sent to an LLM grader
+- Model used: Qwen/Qwen3-4B-Instruct-2507
+- Grader scores answers on semantic correctness, helpfulness, and tone/safety
+- Structured results are stored for metrics, visualization, and baseline comparison
 <div class="mermaid">
 flowchart TB
 	I[Test runner<br/>pytest / script] --> J[Support bot app]

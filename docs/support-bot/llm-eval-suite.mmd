@@ -1,0 +1,30 @@
+%%{init: {"flowchart": {"nodeSpacing": 45, "rankSpacing": 90}}}%%
+flowchart TB
+    subgraph Workflow[Eval Workflow]
+        direction TB
+        A[Test cases<br/>question + expected intent] --> B[Run support bot<br/>end-to-end query]
+        B --> C[Capture bot outputs<br/>answer + latency + metadata]
+        C --> D[Prepare grader input<br/>question + bot answer + rubric]
+        D --> E[External LLM grader<br/>structured JSON scoring]
+        E --> F[Aggregate metrics<br/>quality/helpfulness/tone/safety]
+        F --> G[Compare to baseline<br/>threshold checks]
+        G --> H[Publish report<br/>pass/fail + trend]
+    end
+
+    subgraph Architecture[System Architecture]
+        direction TB
+        I[Test runner<br/>pytest / script] --> J[Support bot app]
+        J --> K[Knowledge dataset<br/>JSON + embeddings]
+        I --> L[Eval orchestrator]
+        L --> M[Prompt/rubric templates]
+        L --> N[Grader model API]
+        N --> O[Scored judgments<br/>JSON records]
+        O --> P[Metrics store<br/>CSV/DB/W&B]
+        P --> Q[Dashboard + CI gate]
+    end
+
+    H -.feeds.-> Q
+    H -.next cycle.-> I
+
+    classDef readable font-size:16px,stroke-width:2px;
+    class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q readable;

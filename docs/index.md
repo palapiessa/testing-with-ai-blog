@@ -10,7 +10,8 @@ You can find me on [LinkedIn](https://www.linkedin.com/in/petrialapiessa/).
 Check out my posts:
 ## General AI topics
 - [The Cost of Inference](./azure-ai/2026-04-10-inference-costs.md)
-
+- [Agent-a-Thon, Day 1](./azure-ai/2026-09-18-frontierweek.md)
+  
 ## Support Bot
 - [Let's prepare for support](./support-bot/2026-02-24-support-setup.md)
 - [Part 2: The bot just got bigger](./support-bot/2026-02-28-more-data.md)

@@ -1,13 +1,16 @@
 ---
-title: "Agent-a-Thon, day 1"
+title: "Agent-a-Thon, Day 1"
 ---
+Last week Microsoft hosted a Frontier Transformation Week event focused on bringing AI and agents into everyday work. The goal is to show participants how agents can be used in real production scenarios and how to build agentic solutions using Microsoft technologies.
 
-This week Microsoft has hosted a Frontier Transformation Week event which brings AI and agents to everyday work. The intent is to show participants how agents can be used in production and guide how to implement own agentic solutions with help of Microsoft products. Yesterday on Thursday a hackathon was started and I joined the challenge to create my own ideas. We have a week for completing our hackathon and submit the results. The best ones will be awarded.
+On Thursday, a hackathon kicked off as part of the event, and I decided to join with one of my own ideas. We have one week to complete our projects and submit the results.
 
-My plan is to create a team of 2 agents and a human for software development tasks. There will be one developer and one test analyst agent and a human to approve the results. The team will work on a open source web application created by Bita Yeganeh during her studies. 
+My plan is to create a software development team consisting of two AI agents and a human reviewer. The team will include a developer agent, a test analyst agent, and a human responsible for reviewing and approving the results. The agents will work on an open-source web application originally created by Bita Yeganeh [BitaYeganeh/hrApp](https://github.com/BitaYeganeh/hrApp) during her studies.
 
-The repo for the work is in GitHub: https://github.com/palapiessa/hrApp and the team's development work is based on tools and processes provided by GitHub. The application itself is deployed to Azure and the agents will be in MS Foundry. 
+The project repository is hosted in GitHub: [palapiessa/hrApp](https://github.com/palapiessa/hrApp). The team's development process will be built around GitHub tools and workflows. The application itself is deployed to Azure, while the agents will be implemented using Microsoft Foundry.
 
-Yesterday I created two accounts for my dev and test analyst agents, in order to be able to use them with GitHub. I could create only one Google account because my phone number was already used with my personal account and Google is a limitation for creating accounts with same phone number. I was not able to create icloud account but with Microsoft I was succesful, but I noticed that the username cannot contain word "agent" in a MS account. I had also been burning my tokens while setting up the web application project in GitHub and Azure, and GH Copilot already mentioned me that 80 % of my monthly tokens have been used.
+On Friday I was mostly about getting the foundations in place. I created accounts for my developer and test analyst agents so they can participate in the GitHub workflow. That turned out to be more complicated than expected. I could only create one Google account because my phone number was already associated with my personal account and Google limits how many accounts can use the same number. I wasn't able to get an iCloud account working, but I had better luck with Microsoft accounts. One interesting discovery was that Microsoft account usernames apparently cannot include the word "agent".
 
-I'll try to keep up with daily posts to inform you how my effort proceeds. 
+I also managed to burn through quite a few tokens while setting up the project across GitHub and Azure. GitHub Copilot has already informed me that I've used 80% of my monthly token allocation, and the actual hackathon work has barely started.
+
+I'll try to post daily updates throughout the challenge so you can follow the progress, the setbacks, and hopefully some interesting results as this AI-powered development team takes shape over the next few days. Stay tuned for Day 2! 

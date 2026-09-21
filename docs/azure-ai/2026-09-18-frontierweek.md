@@ -3,6 +3,8 @@ title: "Agent-a-Thon, Day 1"
 ---
 Last week Microsoft hosted a Frontier Transformation Week event focused on bringing AI and agents into everyday work. The goal is to show participants how agents can be used in real production scenarios and how to build agentic solutions using Microsoft technologies.
 
+<img src="./images/2026-09-18-frontierweek.png" alt="Azure cost analysis" width="100%" />
+
 On Thursday, a hackathon kicked off as part of the event, and I decided to join with one of my own ideas. We have one week to complete our projects and submit the results.
 
 My plan is to create a software development team consisting of two AI agents and a human reviewer. The team will include a developer agent, a test analyst agent, and a human responsible for reviewing and approving the results. The agents will work on an open-source web application originally created by Bita Yeganeh [BitaYeganeh/hrApp](https://github.com/BitaYeganeh/hrApp) during her studies.

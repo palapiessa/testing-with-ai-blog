@@ -6,9 +6,7 @@ Yesterday I invited the two agent accounts as collaborators to my GitHub reposit
 
 While exploring the repository settings, I tried to find a place where collaborator permission levels could be viewed or modified. However, there was no visible rights selection or role configuration for collaborators. After some investigation, I learned that the repository is under my personal GitHub account rather than a GitHub organisation. For personal repositories, GitHub primarily distinguishes between the repository owner and collaborators, and collaborators effectively receive write access. The more granular permission levels available for organisation-owned repositories are not exposed in the same way.
 
-<br><br>
-&lt;img src="./images/2026-09-21-Frontierweek.png" alt="Collaborators in GitHub" width="100%" /&gt;
-<br><br>
+<img src="./images/2026-09-21-Frontierweek.png" alt="Collaborators" width="100%" />
 
 Next, I wanted proof that the agent accounts could actually participate in the workflow. I logged in as **PetriDevAgent**, created a branch, edited the README directly in the GitHub web UI, committed the changes, pushed them, and created a pull request. I was then able to review and approve the PR from my own account. That successfully validated the basic development workflow for the project.
 

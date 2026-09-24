@@ -12,6 +12,8 @@ Check out my posts:
 - [The Cost of Inference](./azure-ai/2026-04-10-inference-costs.md)
 - [Agent-a-Thon, Day 1](./azure-ai/2026-09-18-frontierweek.md)
 - [Agent-a-Thon, Day 2](./azure-ai/2026-09-21-frontierweek.md)
+- [Agent-a-Thon, Day 3](./azure-ai/2026-09-22-frontierweek.md)
+- [Agent-a-Thon, Day 4](./azure-ai/2026-09-23-frontierweek.md)
   
 ## Support Bot
 - [Let's prepare for support](./support-bot/2026-02-24-support-setup.md)

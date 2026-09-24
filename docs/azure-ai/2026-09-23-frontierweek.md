@@ -47,7 +47,7 @@ For the first time it felt like observing a small software team working inside G
 
 I also added a baseline Playwright test myself to the project and created a GitHub Actions workflow to execute it. The workflow completed successfully and the test passed. The next goal is to have the Test Automation Agent generate Playwright tests based on actual implementation changes and commit those tests back into the repository.
 
-<img src="./images/2026-09-23-Playwright-test-run.png" alt="Developer Agent at work" width="100%" />
+<img src="./images/2026-09-23-Frontierweek-Playwright.png" alt="Developer Agent at work" width="100%" />
 
 After that, I'd like to connect the workflow to Azure deployment and execute Playwright tests against a deployed environment. I also need to prepare the submission presentation for the hackathon and challenge the AI team with a few end-to-end demo runs.
 

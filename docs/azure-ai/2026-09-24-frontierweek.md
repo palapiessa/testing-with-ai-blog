@@ -76,6 +76,6 @@ In the end, the agents did most of the heavy lifting while I focused on review, 
 If you'd like to explore the code, you can find the project repository here:
 [palapiessa/hrApp](https://github.com/palapiessa/hrApp)
 
-It was great fun to work on the project and well worth the effort, regardless of the final competition results. The winners will be announced on October 2nd, and I'm looking forward to seeing all the impressive solutions that were created during the event.
+It was great fun to work on the project and well worth the effort, regardless of the final competition results. I am also grateful for the opportunity to participate in the event and learn from other talented builders and their ideas.  The winners will be announced on October 2nd, and I'm looking forward to seeing all the impressive solutions that were created during the event.
 
 #AI #AgenticAI #AzureAI #AzureAIFoundry #GitHubActions #Playwright #SoftwareTesting #DevOps #Automation #QualityEngineering #Hackathon

@@ -56,7 +56,7 @@ The final stretch was creating the demonstration video and presentation video fo
 I deliberately chose not to leave the finishing touches for the morning and completed everything during the night. Seeing the entire flow work end-to-end made the effort worthwhile. Here is the demo run
 
 <video controls width="420">
-    <source src="./images/2026-09-24-Frontierweek.mp4" type="video/quicktime" />
+    <source src="./images/2026-09-24-frontierweek.mp4" type="video/quicktime" />
     Your browser does not support the video tag.
 </video>
 
